@@ -72,6 +72,7 @@
             // 
             // dataGridViewKontakte
             // 
+            this.dataGridViewKontakte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewKontakte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewKontakte.Location = new System.Drawing.Point(12, 60);
             this.dataGridViewKontakte.Name = "dataGridViewKontakte";

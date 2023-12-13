@@ -22,15 +22,21 @@ namespace KontaktManager
 
         private void buttonhinzufugen_Click(object sender, EventArgs e)
         {
-            if (textBoxEmail != null && textBoxName != null && textBoxPhone != null)
+            if (textBoxEmail.Text != "" && textBoxName.Text != "" && textBoxPhone.Text != "")
             {
-                string Name = textBoxName.Text;
-                string Phone = textBoxPhone.Text;
-                string Email = textBoxEmail.Text;
-                Contact contact = new Contact(Name,Email, Phone);
+                
 
+                Contact contact = new Contact();
+                contact.Name = textBoxName.Text;
+                contact.Email = textBoxEmail.Text;
+                contact.Phone = textBoxPhone.Text;
+                
                 contactList.Contacts.Add(contact);
 
+            }
+            else
+            {
+                MessageBox.Show("Fülle alle felder aus");
             }
         }
     }

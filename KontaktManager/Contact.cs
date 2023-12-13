@@ -15,24 +15,22 @@ namespace KontaktManager
         public string Name
         {
             get { return name; }
+            set { name = value; }
         }
 
         public string Email
         {
             get { return email; }
+            set { email = value; }
         }
 
         public string Phone
         {
             get { return phone; }
+            set { phone = value; }
         }
 
-        public Contact(string Nameinput, string Emailinput, string Phoneinput)
-        {
-            name = Nameinput;
-            email = Emailinput;
-            phone = Phoneinput;
-        }
+      
 
     }
 }
