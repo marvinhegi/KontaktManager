@@ -56,12 +56,12 @@ namespace KontaktManager
                             sw.WriteLine($"{contact.Name};{contact.Email};{contact.Phone}");
                         }
 
-                        MessageBox.Show("Export erfolgreich abgeschlossen.", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        throw new Exception("Export erfolgreich abgeschlossen.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Fehler beim Export: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new Exception($"Fehler beim Export: {ex.Message}");
                 }
             }
         }
@@ -104,16 +104,16 @@ namespace KontaktManager
                             else
                             {
                                 // Fehlerhafte Zeile in der CSV-Datei
-                                MessageBox.Show($"Fehler beim Lesen der Zeile: {line}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                throw new Exception($"Fehler beim Lesen der Zeile: {line}");
                             }
                         }
 
-                        MessageBox.Show("Import erfolgreich abgeschlossen.", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        throw new Exception("Import erfolgreich abgeschlossen.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Fehler beim Import: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new Exception($"Fehler beim Import: {ex.Message}");
                 }
             }
         }

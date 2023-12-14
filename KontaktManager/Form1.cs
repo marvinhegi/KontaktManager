@@ -50,12 +50,27 @@ namespace KontaktManager
 
         private void buttonExportcsv_Click(object sender, EventArgs e)
         {
-            contactList.ExportCsv(contactList);
+            try
+            {
+
+                contactList.ExportCsv(contactList);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonImportcsv_Click(object sender, EventArgs e)
         {
-            contactList.ImportCsv(contactList);
+            try
+            {
+                contactList.ImportCsv(contactList);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
