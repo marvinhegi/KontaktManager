@@ -16,7 +16,7 @@ namespace KontaktManager
         public Form1()
         {
             InitializeComponent();
-
+          
             dataGridViewKontakte.DataSource = contactList.Contacts;
         }
 
@@ -33,11 +33,29 @@ namespace KontaktManager
                 
                 contactList.Contacts.Add(contact);
 
+                textBoxName.Text = "";
+                textBoxEmail.Text = "";
+                textBoxPhone.Text = "";
             }
             else
             {
                 MessageBox.Show("Fülle alle felder aus");
             }
+        }
+
+        private void buttonListeLoschen_Click(object sender, EventArgs e)
+        {
+            contactList.Clear();
+        }
+
+        private void buttonExportcsv_Click(object sender, EventArgs e)
+        {
+            contactList.ExportCsv(contactList);
+        }
+
+        private void buttonImportcsv_Click(object sender, EventArgs e)
+        {
+            contactList.ImportCsv(contactList);
         }
     }
 }

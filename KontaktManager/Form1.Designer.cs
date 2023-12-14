@@ -51,6 +51,7 @@
             this.buttonListeLoschen.TabIndex = 0;
             this.buttonListeLoschen.Text = "Liste Löschen";
             this.buttonListeLoschen.UseVisualStyleBackColor = true;
+            this.buttonListeLoschen.Click += new System.EventHandler(this.buttonListeLoschen_Click);
             // 
             // buttonImportcsv
             // 
@@ -60,6 +61,7 @@
             this.buttonImportcsv.TabIndex = 1;
             this.buttonImportcsv.Text = "Import csv";
             this.buttonImportcsv.UseVisualStyleBackColor = true;
+            this.buttonImportcsv.Click += new System.EventHandler(this.buttonImportcsv_Click);
             // 
             // buttonExportcsv
             // 
@@ -69,9 +71,11 @@
             this.buttonExportcsv.TabIndex = 2;
             this.buttonExportcsv.Text = "Export csv";
             this.buttonExportcsv.UseVisualStyleBackColor = true;
+            this.buttonExportcsv.Click += new System.EventHandler(this.buttonExportcsv_Click);
             // 
             // dataGridViewKontakte
             // 
+            this.dataGridViewKontakte.AllowUserToAddRows = false;
             this.dataGridViewKontakte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewKontakte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewKontakte.Location = new System.Drawing.Point(12, 60);
@@ -88,7 +92,7 @@
             this.labelneuerKontakt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelneuerKontakt.Location = new System.Drawing.Point(12, 451);
             this.labelneuerKontakt.Name = "labelneuerKontakt";
-            this.labelneuerKontakt.Size = new System.Drawing.Size(144, 25);
+            this.labelneuerKontakt.Size = new System.Drawing.Size(115, 20);
             this.labelneuerKontakt.TabIndex = 4;
             this.labelneuerKontakt.Text = "Neuer Kontakt";
             // 
@@ -120,7 +124,7 @@
             this.labelemail.AutoSize = true;
             this.labelemail.Location = new System.Drawing.Point(75, 543);
             this.labelemail.Name = "labelemail";
-            this.labelemail.Size = new System.Drawing.Size(56, 20);
+            this.labelemail.Size = new System.Drawing.Size(45, 16);
             this.labelemail.TabIndex = 8;
             this.labelemail.Text = "E-Mail";
             // 
@@ -136,7 +140,7 @@
             this.labelPhone.AutoSize = true;
             this.labelPhone.Location = new System.Drawing.Point(75, 586);
             this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(58, 20);
+            this.labelPhone.Size = new System.Drawing.Size(46, 16);
             this.labelPhone.TabIndex = 10;
             this.labelPhone.Text = "Phone";
             // 
